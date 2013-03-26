@@ -1,3 +1,5 @@
+# = Class: ngircd::package
+#
 class ngircd::package {
 
     package{'ngircd':

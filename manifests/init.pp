@@ -54,11 +54,11 @@ class ngircd(
   class {'ngircd::config':
       ng_temp_dir => $ng_temp_dir,
       ng_conf_dir => $ng_conf_dir,
-      require => Anchor['ngircd::end'],
+      require     => Anchor['ngircd::end'],
   }
   class {'ngircd::service':
     ng_temp_dir => $ng_temp_dir,
     ng_conf_dir => $ng_conf_dir,
-    require => Anchor['ngircd::end'],
+    require     => Anchor['ngircd::end'],
   }
 }

@@ -1,6 +1,8 @@
+# = Class: ngircd::service
+#
 class ngircd::service (
-  $ng_temp_dir,
-  $ng_conf_dir
+  $ng_temp_dir = '/tmp',
+  $ng_conf_dir = '/etc'
 ) {
   exec { 'rebuild-ngircd-conf':
       command     => "/bin/cat ${ngircd::ng_temp_dir}/ngircd/* > ${ngircd::ng_conf_dir}/ngircd.conf",
@@ -10,6 +12,6 @@ class ngircd::service (
   service{'ngircd':
       ensure    => running,
       enable    => true,
-      subscribe  => Exec['rebuild-ngircd-conf'],
+      subscribe => Exec['rebuild-ngircd-conf'],
   }
 }
