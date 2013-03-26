@@ -1,12 +1,11 @@
 class ngircd(
     $servername='localhost',
     $listenaddress='127.0.0.1',
-    $port='6667',
+    $port='6667'
 ){
     $ng_temp_dir = '/tmp'
     $ng_conf_dir = '/etc'
 
-    class {'stdlib':}
     class {'ngircd::package':
         notify  => Class['ngircd::service'],
     }
