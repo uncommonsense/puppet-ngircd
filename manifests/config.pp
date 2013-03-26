@@ -1,4 +1,7 @@
-class ngircd::config{
+class ngircd::config (
+  $ng_temp_dir,
+  $ng_conf_dir,
+) {
     File {
         owner => 'root',
         group => 'root',
