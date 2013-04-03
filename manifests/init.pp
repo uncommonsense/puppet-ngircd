@@ -34,6 +34,10 @@
 #   $listenaddress => '0.0.0.0'
 # }
 #
+# == Todo
+#
+# * Convert channel fragments into definitions using augeas lens?
+#
 class ngircd(
     $servername    = 'localhost.localdomain',
     $listenaddress = '127.0.0.1',
