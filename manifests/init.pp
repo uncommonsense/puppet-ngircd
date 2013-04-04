@@ -37,7 +37,8 @@
 # == Todo
 #
 # * Convert channel fragments into definitions using augeas lens?
-# * Fix puppet-lint issues in channel.pp and service.pp
+# * Fix puppet-lint issues in channel.pp and service.pp.
+# * Add rspec test for configuration of channels & ngircd.conf.
 #
 class ngircd(
     $servername    = 'localhost.localdomain',
