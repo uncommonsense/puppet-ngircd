@@ -6,6 +6,7 @@ GEM
     hiera (1.1.2)
       json_pure
     json_pure (1.7.7)
+    multi_json (1.7.2)
     puppet (3.1.0)
       facter (~> 1.6)
       hiera (~> 1.0)
@@ -20,6 +21,10 @@ GEM
     rspec-mocks (2.12.2)
     rspec-puppet (0.1.6)
       rspec
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
 
 PLATFORMS
   ruby
@@ -29,3 +34,4 @@ DEPENDENCIES
   rake (>= 0.9.0)
   rspec (>= 2.8.0)
   rspec-puppet (>= 0.1.1)
+  simplecov (>= 0.7.1)
