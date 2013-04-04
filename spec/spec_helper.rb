@@ -1,8 +1,3 @@
-require 'simplecov'
-SimpleCov.start do
-  add_filter "/spec/"
-end
-
 require 'rspec-puppet'
 
 fixture_path = File.expand_path(File.join(__FILE__, '..', 'fixtures'))
