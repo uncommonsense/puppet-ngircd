@@ -39,9 +39,12 @@
 # * Convert channel fragments into definitions using augeas lens?
 # * Fix puppet-lint issues in channel.pp and service.pp.
 # * Add rspec test for configuration of channels & ngircd.conf.
+# * Whenever template ngircd.conf.erb is touched ngircd server
+#   kicked.
 #
 class ngircd(
     $servername    = 'localhost.localdomain',
+    $adminemail    = 'root@localhost.localdomain',
     $listenaddress = '127.0.0.1',
     $ng_temp_dir   = '/tmp',
     $ng_conf_dir   = '/etc',

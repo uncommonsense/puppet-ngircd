@@ -1,7 +1,7 @@
 # $Id$
 
 #
-# This is a sample configuration file for the ngIRCd, which must be adepted
+# This is a sample configuration file for the ngIRCd, which must be adapted
 # to the local preferences and needs.
 #
 # Comments are started with "#" or ";".
@@ -34,7 +34,7 @@
 	# ADMIN command. Not required by server but by RFC!
 	;AdminInfo1 = Description
 	;AdminInfo2 = Location
-	;AdminEMail = admin@irc.server
+	AdminEMail = <%= @adminemail %>
 
 	# Ports on which the server should listen. There may be more than
 	# one port, separated with ",". (Default: 6667)

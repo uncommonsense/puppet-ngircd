@@ -27,4 +27,22 @@ describe 'ngircd', :type => :class do
     end
   end
 
+  describe 'ngircd::config' do
+    context 'generate example ngircd.conf file using variables' do
+      let :params do {
+          :adminemail => 'root@localhost.localdomain',
+      }
+      end
+      it {
+        should contain_file('/etc/ngircd.conf').with(
+            {
+                :ensure  => 'file',
+                :notify  => 'Service[ngircd]'
+            }
+        )
+        should contain_file('/etc/ngircd.conf').with_content(/root@localhost.localdomain/)
+      }
+    end
+  end
+
 end
