@@ -41,6 +41,7 @@
 # * Add rspec test for configuration of channels & ngircd.conf.
 # * Whenever template ngircd.conf.erb is touched ngircd server
 #   kicked.
+# * Add config file validation using "ngircd --configtest"
 #
 class ngircd(
     $servername    = 'localhost.localdomain',
